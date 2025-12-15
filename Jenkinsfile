@@ -17,7 +17,6 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 sh """
-                    cd worker
                     docker build -t ${IMAGE} .
                 """
             }
